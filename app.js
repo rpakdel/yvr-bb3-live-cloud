@@ -32,6 +32,10 @@ app.get('/api/:p0/:p1/asnum', (req, res) => {
     res.send(r.toString())
 })
 
+app.get('/api/:p0/:p1', (req, res) => {
+    res.send(req.params.p0 + ' ' + req.params.p1)
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
